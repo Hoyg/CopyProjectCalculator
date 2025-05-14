@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Canarys Copy Project Pricing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://copyprojects.ecanarys.com/wp-content/uploads/2023/01/cropped-Canarys-copy-project-1.png" alt="Copy Project Pricing Calculator Logo" class="copyproject-logo">
+            </div>
+            <div class="canarys-logo-container">
+                <img src="https://ecanarys.com/wp-content/uploads/2022/05/canarys-logo.png" alt="Canarys Logo" class="canarys-logo">
+            </div>
+        </div>
+    </header>    <div class="container">
+        <h1>Pricing Calculator</h1>
+        <div class="calculator">
+            <div class="file-upload-container">
+                <label for="excelFile" class="file-upload-label">Upload Excel File</label>
+                <input type="file" id="excelFile" accept=".xlsx, .xls" class="file-input">
+                <button id="processExcelBtn" class="process-btn">Process Excel File</button>
+                <div id="uploadStatus" class="upload-status"></div>
+            </div>
+            <div class="separator">OR</div>
+            <div class="questionnaire-link">
+                <a href="questions.html" class="questionnaire-btn">Fill Migration Questionnaire</a>
+            </div>
+            <div class="separator">OR</div>
+            <div class="input-group">
+                <label for="workItems">Work Items:</label>
+                <input type="number" id="workItems" min="0" value="0">
+            </div>
+            <div class="input-group">
+                <label for="gitRepos">Git Repositories:</label>
+                <input type="number" id="gitRepos" min="0" value="0">
+            </div>
+            <div class="input-group">
+                <label for="buildPipelines">Build Pipelines:</label>
+                <input type="number" id="buildPipelines" min="0" value="0">
+            </div>
+            <div class="input-group">
+                <label for="releasePipelines">Release Pipelines:</label>
+                <input type="number" id="releasePipelines" min="0" value="0">
+            </div>
+            <div class="input-group">
+                <label for="testPlans">Test Plans:</label>
+                <input type="number" id="testPlans" min="0" value="0">
+            </div>
+            <div class="input-group">
+                <label for="testSuites">Test Suites:</label>
+                <input type="number" id="testSuites" min="0" value="0">
+            </div>
+            <div class="input-group">
+                <label for="testCases">Test Cases:</label>
+                <input type="number" id="testCases" min="0" value="0">
+            </div>
+            <button id="calculateBtn">Calculate Price</button>
+              <div class="results" id="results">
+                <h2>Price Breakdown</h2>
+                <div class="result-item">
+                    <span>Platform Cost:</span>
+                    <span id="baseCost">$1,500.00</span>
+                </div>
+                <div class="result-item">
+                    <span>Work Items Cost:</span>
+                    <span id="workItemsCost">$0.00</span>
+                </div>
+                <div class="result-item">
+                    <span>Git Repositories Cost:</span>
+                    <span id="gitReposCost">$0.00</span>
+                </div>
+                <div class="result-item">
+                    <span>Build Pipelines Cost:</span>
+                    <span id="buildPipelinesCost">$0.00</span>
+                </div>
+                <div class="result-item">
+                    <span>Release Pipelines Cost:</span>
+                    <span id="releasePipelinesCost">$0.00</span>
+                </div>
+                <div class="result-item">
+                    <span>Test Items Cost:</span>
+                    <span id="testItemsCost">$0.00</span>
+                </div>                <div class="result-item total">
+                    <span>Total Cost:</span>
+                    <span id="totalCost">$1,500.00</span>
+                </div>
+                <button id="exportBtn" class="export-btn">Export to Excel</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

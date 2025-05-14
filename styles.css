@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.calculator {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.file-upload-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.file-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.process-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.process-btn:hover {
+    background-color: #d35400;
+}
+
+.upload-status {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.questionnaire-link {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.questionnaire-btn {
+    display: block;
+    padding: 12px;
+    background-color: #9b59b6;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.questionnaire-btn:hover {
+    background-color: #8e44ad;
+}
+
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 700;
+    position: relative;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 30px);
+    height: 1px;
+    background-color: #ddd;
+}
+
+.separator::before {
+    left: 0;
+}
+
+.separator::after {
+    right: 0;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 500;
+    flex-basis: 50%;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50%;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.export-btn {
+    margin-top: 30px;
+    background-color: #27ae60;
+}
+
+.export-btn:hover {
+    background-color: #219955;
+}
+
+.results {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.results h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Header styles */
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.copyproject-logo {
+    height: 50px;
+    max-width: 100%;
+}
+
+.canarys-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.canarys-logo {
+    height: 40px;
+    max-width: 100%;
+}

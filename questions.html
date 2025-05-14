@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canarys Copy Project Migration Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .questions-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .question-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .question-section h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .question-item {
+            margin-bottom: 20px;
+        }
+        
+        .question-item label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .question-item input[type="number"],
+        .question-item input[type="text"],
+        .question-item select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+          .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://copyprojects.ecanarys.com/wp-content/uploads/2023/01/cropped-Canarys-copy-project-1.png" alt="Copy Project Pricing Calculator Logo" class="copyproject-logo">
+            </div>
+            <div class="canarys-logo-container">
+                <img src="https://ecanarys.com/wp-content/uploads/2022/05/canarys-logo.png" alt="Canarys Logo" class="canarys-logo">
+            </div>
+        </div>
+    </header>
+    
+    <div class="questions-container">
+        <h1>Migration Questionnaire</h1>
+        <form id="migrationQuestionnaireForm">
+            <div class="question-section">
+                <h2>Organization Information</h2>
+                <div class="question-item">
+                    <label for="orgName">Organization Name:</label>
+                    <input type="text" id="orgName" name="orgName" required>
+                </div>
+                <div class="question-item">
+                    <label for="projectName">Project Name:</label>
+                    <input type="text" id="projectName" name="projectName" required>
+                </div>
+            </div>
+            
+            <div class="question-section">
+                <h2>Work Items</h2>
+                <div class="question-item">
+                    <label for="totalWorkItems">Total Work Items to migrate:</label>
+                    <input type="number" id="totalWorkItems" name="totalWorkItems" min="0" value="0">
+                </div>
+                <div class="question-item">
+                    <label for="workItemTypes">Types of Work Items (select all that apply):</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="workItemTypes" value="Epics"> Epics</label>
+                        <label><input type="checkbox" name="workItemTypes" value="Features"> Features</label>
+                        <label><input type="checkbox" name="workItemTypes" value="UserStories"> User Stories</label>
+                        <label><input type="checkbox" name="workItemTypes" value="Tasks"> Tasks</label>
+                        <label><input type="checkbox" name="workItemTypes" value="Bugs"> Bugs</label>
+                        <label><input type="checkbox" name="workItemTypes" value="Other"> Other</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-section">
+                <h2>Repositories</h2>
+                <div class="question-item">
+                    <label for="totalGitRepos">Total Git Repositories to migrate:</label>
+                    <input type="number" id="totalGitRepos" name="totalGitRepos" min="0" value="0">
+                </div>
+            </div>
+            
+            <div class="question-section">
+                <h2>Pipelines</h2>
+                <div class="question-item">
+                    <label for="totalBuildPipelines">Total Build Pipelines to migrate:</label>
+                    <input type="number" id="totalBuildPipelines" name="totalBuildPipelines" min="0" value="0">
+                </div>
+                <div class="question-item">
+                    <label for="totalReleasePipelines">Total Release Pipelines to migrate:</label>
+                    <input type="number" id="totalReleasePipelines" name="totalReleasePipelines" min="0" value="0">
+                </div>
+            </div>
+            
+            <div class="question-section">
+                <h2>Test Management</h2>
+                <div class="question-item">
+                    <label for="totalTestPlans">Total Test Plans to migrate:</label>
+                    <input type="number" id="totalTestPlans" name="totalTestPlans" min="0" value="0">
+                </div>
+                <div class="question-item">
+                    <label for="totalTestSuites">Total Test Suites to migrate:</label>
+                    <input type="number" id="totalTestSuites" name="totalTestSuites" min="0" value="0">
+                </div>
+                <div class="question-item">
+                    <label for="totalTestCases">Total Test Cases to migrate:</label>
+                    <input type="number" id="totalTestCases" name="totalTestCases" min="0" value="0">
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Calculate Migration Price</button>
+        </form>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const questionnaireForm = document.getElementById('migrationQuestionnaireForm');
+            
+            questionnaireForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get all the numerical values
+                const totalWorkItems = parseInt(document.getElementById('totalWorkItems').value) || 0;
+                const totalGitRepos = parseInt(document.getElementById('totalGitRepos').value) || 0;
+                const totalBuildPipelines = parseInt(document.getElementById('totalBuildPipelines').value) || 0;
+                const totalReleasePipelines = parseInt(document.getElementById('totalReleasePipelines').value) || 0;
+                const totalTestPlans = parseInt(document.getElementById('totalTestPlans').value) || 0;
+                const totalTestSuites = parseInt(document.getElementById('totalTestSuites').value) || 0;
+                const totalTestCases = parseInt(document.getElementById('totalTestCases').value) || 0;
+                
+                // Store values in localStorage to pass them to the calculator page
+                localStorage.setItem('workItems', totalWorkItems);
+                localStorage.setItem('gitRepos', totalGitRepos);
+                localStorage.setItem('buildPipelines', totalBuildPipelines);
+                localStorage.setItem('releasePipelines', totalReleasePipelines);
+                localStorage.setItem('testPlans', totalTestPlans);
+                localStorage.setItem('testSuites', totalTestSuites);
+                localStorage.setItem('testCases', totalTestCases);
+                
+                // Redirect to the calculator page
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>
